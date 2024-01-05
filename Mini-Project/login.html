@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Authentication</title>
+        <link rel="stylesheet" href="all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Share Tech Mono' rel='stylesheet'>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <h1>E-Corp</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">About Us</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
+            <h1>User Login</h1>
+            <form method="POST" action="encrypt_login.php">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" required><br><br>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required><br><br>
+                <input type="submit" value="Login">
+            </form>
+            <hr>
+        </div>
+        <footer>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2023 E-Corp</p>
+        </footer>
+        <script src="all.js"></script>
+    </body>
+</html>
