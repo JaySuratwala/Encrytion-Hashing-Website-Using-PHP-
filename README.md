@@ -1,7 +1,7 @@
 # Encryption-Hashing<br>
-This is a Python Flask web application that provides user registration and authentication functionality, with user credentials stored in a SQLite database. The application uses the AES and SHA256 cryptographic algorithms for password encryption and hashing, respectively, to ensure the security of user data.<br><br>
+This is a PHP web application that provides user registration and authentication functionality, with user credentials stored in a SQLite database. The application uses the AES and SHA256 cryptographic algorithms for password encryption and hashing, respectively, to ensure the security of user data.<br><br>
 
-__The application has three Flask routes:__<br>
+__The application has three PHP routes:__<br>
 • The index route renders the index.html file.<br>
 • The favicon route serves the favicon.ico file.<br>
 • The register/login routes handle user registration and authentication.<br><br>
