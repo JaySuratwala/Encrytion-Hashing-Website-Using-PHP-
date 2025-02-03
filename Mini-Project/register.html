@@ -20,11 +20,10 @@
         </header>
         <div class="content">
             <form method="POST" action="encrypt_store.php">
-                <h1>User Registration</h1>
-                <label for="username">Username:</label>
-                <input type="text" name="username" id="username" required><br><br>
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password" required><br><br>
+                <h1>User Registration</h1><br>
+                <input type="text" name="username" id="username" placeholder="Username" required><br><br>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <span class="toggle-password" onclick="togglePassword()" style="cursor: pointer; color:aliceblue">👁</span><br><br>
                 <button type="submit"> Register</button>
             </form>
         <hr>
