@@ -19,16 +19,13 @@
             </nav>
         </header>
         <div class="content">
-            <p>Your Accout is Creates Successfuly</p>
-            <h1>User Login</h1>
             <form method="POST" action="encrypt_login.php">
-                <label for="username">Username:</label>
-                <input type="text" name="username" id="username" required><br><br>
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password" required><br><br>
-                <input type="submit" value="Login">
+            <p>Your Accout is Creates Successfuly</p>
+            <h1>User Login</h1><br>
+                <input type="text" name="username" id="username" placeholder="*Username" required><br><br>
+                <input type="password" name="password" id="password" placeholder="*Password"><span class="toggle-password" onclick="togglePassword()" style="cursor: pointer; color:aliceblue">👁</span>
+                <button type="submit" value="Login">Login</button>
             </form>
-            <hr>
         </div>
         <footer>
             <div class="social-media">
@@ -39,5 +36,11 @@
             <p>&copy; 2023 E-Corp</p>
         </footer>
         <script src="all.js"></script>
+        <script>
+            function togglePassword() {
+                let passField = document.getElementById("password");
+                passField.type = passField.type === "password" ? "text" : "password";
+            }
+        </script>
     </body>
 </html>

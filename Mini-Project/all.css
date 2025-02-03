@@ -4,89 +4,80 @@
     margin: 0;
     padding: 0;
 }
+
 body {
-    background: linear-gradient(to bottom,#865DFF,#13005A);
-    background-color: #444;
+    background: linear-gradient(to bottom, #865DFF, #13005A);
     color: #03C988;
     font-family: Arial, sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* overflow: hidden; */
 }
+
 a {
     color: #03C988;
     text-decoration: none;
 }
+
 a:hover {
     text-decoration: underline;
 }
+
 /* Header Styles */
-header{
-    background: linear-gradient(to top,#865DFF,#13005A);
-    background-color: #13005A;
+header {
+    background: linear-gradient(to top, #865DFF, #13005A);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    /* opacity: 75%; */
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     box-shadow: 1px 1px 5px #13005A;
 }
-/* Stickyness */
+
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
 }
+
 .logo h1 {
     color: #fff;
     font-size: 35px;
     font-weight: bold;
-    font-family: 'Share Tech Mono';
+    font-family: 'Share Tech Mono', monospace;
 }
-.logo{
-    padding: 10px 16px;
-}
+
 nav ul {
     display: flex;
     list-style: none;
 }
+
 nav li {
     margin-right: 20px;
 }
-nav li:last-child {
-    margin-right: 0;
-}
+
 nav a {
     color: #03C988;
     font-size: 18px;
     font-weight: bold;
 }
-nav a:hover {
-    text-decoration: underline;
-}
+
 /* Content Styles */
 .content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
+
 .about-us {
-    min-height: calc(100vh - 230px); /* Subtract the header and footer height from the viewport height */
+    min-height: calc(100vh - 230px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
-.about-us h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-.about-us .info {
-    margin-top: 20px;
-}  
+
 .about-us .info p {
     font-size: 18px;
     line-height: 1.7;
@@ -94,12 +85,11 @@ nav a:hover {
     background-color: #222;
     border-radius: 23px;
     box-shadow: 1px 1px 5px #03C988;
-    height: 170px;
-    width: 100%;
-    cursor: text;
+    padding: 20px;
     text-align: center;
     max-width: fit-content;
 }
+
 /* Footer Styles */
 footer {
     background-color: #222;
@@ -112,18 +102,9 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    
 }
-.social-media a {
-    margin-right: 20px;
-}
-.social-media i {
-    font-size: 24px;
-}
-p {
-    font-size: 14px;
-}
-/* Login page content css */
+
+/* Login Form Styles */
 form {
     display: flex;
     flex-direction: column;
@@ -134,26 +115,11 @@ form {
     height: 400px;
     width: 480px;
     border-radius: 60px;
-    justify-content: center;
-    align-self: center;
     box-shadow: 1px 1px 5px #03C988;
     padding: 23px;
-    margin: 60px 300px;
+    margin: 60px auto;
 }
-label,input{
-    display: block;
-    width: 150px;
-    float: left;
-    margin-bottom: 10px;
-}
-label {
-    text-align: right;
-    width: 75px;
-    padding-right: 20px;
-}
-br {
-    clear: left;
-}
+
 input[type="text"],
 input[type="password"] {
     width: 300px;
@@ -165,43 +131,26 @@ input[type="password"] {
     background-color: #444;
     color: #fff;
 }
-
-input[type="submit"] {
+.password-container input {
+    width: calc(100% - 40px); /* Adjusted width to accommodate the icon */
+}
+button{
     width: 320px;
     padding: 10px;
-    margin: 10px 0;
     border: none;
     border-radius: 5px;
     background-color: #03C988;
     color: #222;
     font-size: 16px;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-input[type="submit"]:hover {
-    background-color: #03C988;
-    color: #222;
+button:hover {
+    background-color: #02b878;
 }
 
-.error-message {
-    color: red;
-    margin: 10px 0;
-}
-.content h1{
-    text-align: center;
-}
-
-/* Container style */
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-/* Image style */
-.image {
-    margin-right: 20px;
-}
-/* Banner style */
+/* Banner Styles */
 #banner {
     background-size: cover;
     color: #03C988;
@@ -210,97 +159,46 @@ input[type="submit"]:hover {
     align-items: center;
     justify-content: center;
     max-width: 1000px;
-    position: relative;
     margin: auto;
     z-index: -1;
 }
-/* Slide style */
-.slide{
+
+/* Slideshow */
+.slide {
     display: none;
 }
+
 .prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
-    margin-top: -22px;
     padding: 16px;
     color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
     user-select: none;
 }
+
 .next {
     right: 0;
-    border-radius: 3px 0 0 3px;
 }
+
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
 
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-/* slide image style */
-.slide img{
-    border: none;
-    border-radius: 5px;
-    box-shadow: 3px 3px 10px #03C988;
-}
-#myBtn {
-    display: none; 
-    position: fixed;
-    bottom: 20px; 
-    right: 30px; 
-    z-index: 99; 
-    border: none; 
-    outline: none; 
-    background-color: #444; 
-    color: #fff; 
-    cursor: pointer; 
-    padding: 15px; 
-    border-radius: 10px; 
-    font-size: 18px;
-    opacity: 85%; 
-    animation: 0.07;
-}
-#myBtn:hover {
-    background-color: #222; /* Add a dark-grey background on hover */
-}
-/* Developer style */
-.jay img{
-    margin-right: 10px;
-    border-radius: 90px;
-    /* box-shadow: 3px 3px 3px #03C988; */
-}
-.jay{
+/* Developer Section */
+.jay, .arsh {
     display: flex;
     align-items: center;
-}
-.arsh img{
-    margin-right: 10px;
-    border-radius: 90px;
-    /* box-shadow: 3px 3px 3px #03C988; */
-}
-.arsh{
-    display: flex;
-    align-items: center;
-}
-#developed-by{
-    padding-top: 20px;
 }
 
+.jay img, .arsh img {
+    margin-right: 10px;
+    border-radius: 90px;
+}
+
+#developed-by {
+    padding-top: 20px;
+}
