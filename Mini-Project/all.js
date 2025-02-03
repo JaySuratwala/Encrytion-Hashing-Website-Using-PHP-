@@ -8,6 +8,12 @@ function plusSlides(n) {
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
+
+function togglePassword() {
+    let passField = document.getElementById("password");
+    passField.type = passField.type === "password" ? "text" : "password";
+}
+
 function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("slide");
